@@ -3,6 +3,7 @@ import 'package:testimonials_grid_section/providers/rootSizeProvider.dart';
 import 'package:provider/provider.dart';
 
 const Map<String, double> deviceWidths = {
+  'xxs': 480,
   'xs': 575,
   'sm': 767,
   'md': 991,
@@ -15,10 +16,12 @@ void determineRootSize(BuildContext context) {
       Provider.of<RootSizeProvider>(context);
   final deviceWidth = MediaQuery.of(context).size.width;
 
-  if (deviceWidth < deviceWidths['xs']!) {
+  if (deviceWidth < deviceWidths['xxs']!) {
     rootSizeProvider.setRootSize(13);
+  } else if (deviceWidth < deviceWidths['xs']!) {
+    rootSizeProvider.setRootSize(16.65);
   } else if (deviceWidth < deviceWidths['sm']!) {
-    rootSizeProvider.setRootSize(15);
+    rootSizeProvider.setRootSize(19.9);
   } else if (deviceWidth < deviceWidths['md']!) {
     rootSizeProvider.setRootSize(13);
   } else if (deviceWidth < deviceWidths['lg']!) {
