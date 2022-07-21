@@ -18,6 +18,7 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         body: LayoutBuilder(
           builder: (context, constraints) {
+            debugPrint("${constraints.maxWidth}");
             return Container(
               width: constraints.maxWidth,
               height: constraints.maxHeight,
@@ -32,104 +33,6 @@ class HomePage extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      // Container(
-                      //   decoration: BoxDecoration(
-                      //     color: COLOR_VIOLET.toColor(),
-                      //     borderRadius: BorderRadius.circular(rootSize * 0.5),
-                      //   ),
-                      //   child: Stack(
-                      //     children: [
-                      //       Positioned(
-                      //         right: rootSize * 2,
-                      //         child: SvgPicture.asset(
-                      //           "assets/images/bg-pattern-quotation.svg",
-                      //           semanticsLabel: "Quotation marks",
-                      //         ),
-                      //       ),
-                      //       Padding(
-                      //         padding: EdgeInsets.symmetric(
-                      //             horizontal: rootSize * 2,
-                      //             vertical: rootSize * 2.3),
-                      //         child: Column(
-                      //           crossAxisAlignment: CrossAxisAlignment.start,
-                      //           children: [
-                      //             Row(
-                      //               children: [
-                      //                 Container(
-                      //                   width: rootSize * 3,
-                      //                   height: rootSize * 3,
-                      //                   decoration: BoxDecoration(
-                      //                     borderRadius: BorderRadius.circular(
-                      //                         rootSize * 5),
-                      //                     border: Border.all(
-                      //                       color: COLOR_VIOLET
-                      //                           .withLightness(0.75)
-                      //                           .toColor(),
-                      //                       width: rootSize * 0.15,
-                      //                     ),
-                      //                     image: DecorationImage(
-                      //                       image: AssetImage(
-                      //                         "assets/images/image-daniel.jpg",
-                      //                       ),
-                      //                     ),
-                      //                   ),
-                      //                 ),
-                      //                 addHorizontalSpacing(rootSize * 1.2),
-                      //                 Column(
-                      //                   crossAxisAlignment:
-                      //                       CrossAxisAlignment.start,
-                      //                   children: [
-                      //                     Text(
-                      //                       "Daniel Clifford",
-                      //                       style: TextStyle(
-                      //                         color: COLOR_WHITE.toColor(),
-                      //                         fontSize: rootSize,
-                      //                         letterSpacing: rootSize * 0.01,
-                      //                       ),
-                      //                     ),
-                      //                     addVerticalSpacing(rootSize * 0.1),
-                      //                     Text(
-                      //                       "Verified Graduate",
-                      //                       style: TextStyle(
-                      //                         color: COLOR_WHITE
-                      //                             .toColor()
-                      //                             .withOpacity(0.5),
-                      //                         fontSize: rootSize * 0.85,
-                      //                         letterSpacing: rootSize * 0.01,
-                      //                       ),
-                      //                     ),
-                      //                   ],
-                      //                 )
-                      //               ],
-                      //             ),
-                      //             addVerticalSpacing(rootSize * 1.5),
-                      //             Text(
-                      //               "I received a job offer mid-course, and the subjects I learned were current, if not more so, in the company I joined. I honestly feel I got every penny’s worth.",
-                      //               style: TextStyle(
-                      //                 color: COLOR_WHITE.toColor(),
-                      //                 fontWeight: FontWeight.w600,
-                      //                 fontSize: rootSize * 1.47,
-                      //                 letterSpacing: rootSize * 0.05,
-                      //                 height: 1.3,
-                      //               ),
-                      //             ),
-                      //             addVerticalSpacing(rootSize * 1.5),
-                      //             Text(
-                      //               "\“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a transition and have heard some people who had an amazing experience here. I signed up for the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the best - and most grueling - time of my life. Since completing the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. \”",
-                      //               style: TextStyle(
-                      //                 color: COLOR_WHITE
-                      //                     .toColor()
-                      //                     .withOpacity(0.7),
-                      //                 fontSize: rootSize * 1.1,
-                      //                 height: 1.5,
-                      //               ),
-                      //             ),
-                      //           ],
-                      //         ),
-                      //       ),
-                      //     ],
-                      //   ),
-                      // ),
                       CardMobile(
                         personName: "Daniel Clifford",
                         personImg: "image-daniel.jpg",

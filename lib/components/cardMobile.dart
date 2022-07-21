@@ -36,6 +36,14 @@ class CardMobile extends StatelessWidget {
       decoration: BoxDecoration(
         color: backgroundColor.toColor(),
         borderRadius: BorderRadius.circular(rootSize * 0.5),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            offset: Offset(0, rootSize * 5 / 13),
+            spreadRadius: rootSize * 5 / 13,
+            blurRadius: rootSize * 7 / 13,
+          ),
+        ],
       ),
       child: Stack(
         children: [
@@ -102,7 +110,7 @@ class CardMobile extends StatelessWidget {
                   style: TextStyle(
                     color: textColor.toColor(),
                     fontWeight: FontWeight.w600,
-                    fontSize: rootSize * 1.47,
+                    fontSize: rootSize * 1.62,
                     letterSpacing: rootSize * 0.05,
                     height: 1.3,
                   ),
@@ -112,7 +120,7 @@ class CardMobile extends StatelessWidget {
                   "\“ ${body} \”",
                   style: TextStyle(
                     color: textColor.toColor().withOpacity(0.7),
-                    fontSize: rootSize * 1.1,
+                    fontSize: rootSize * 1.14,
                     height: 1.5,
                   ),
                 ),
