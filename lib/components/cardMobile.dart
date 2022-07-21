@@ -1,11 +1,8 @@
-import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:testimonials_grid_section/providers/rootSizeProvider.dart';
-import 'package:testimonials_grid_section/styling.dart';
 import 'package:provider/provider.dart';
 import 'package:testimonials_grid_section/utils/addSpacing.dart';
-import 'package:testimonials_grid_section/utils/determineRootSize.dart';
 
 class CardMobile extends StatelessWidget {
   final bool addSVG;
