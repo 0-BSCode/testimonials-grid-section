@@ -55,6 +55,8 @@ class CardMobile extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(
                 horizontal: rootSize * 2, vertical: rootSize * 2.3),
+            // padding: EdgeInsets.symmetric(
+            //     horizontal: rootSize * 2.5, vertical: rootSize * 3),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
