@@ -27,8 +27,8 @@ void determineRootSize(BuildContext context) {
   } else if (deviceWidth < deviceWidths['lg']!) {
     rootSizeProvider.setRootSize(11);
   } else if (deviceWidth < deviceWidths['xl']!) {
-    rootSizeProvider.setRootSize(17);
+    rootSizeProvider.setRootSize(14);
   } else {
-    rootSizeProvider.setRootSize(19);
+    rootSizeProvider.setRootSize(13.5);
   }
 }

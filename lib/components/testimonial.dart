@@ -3,8 +3,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:testimonials_grid_section/providers/rootSizeProvider.dart';
 import 'package:provider/provider.dart';
 import 'package:testimonials_grid_section/utils/addSpacing.dart';
+import 'package:testimonials_grid_section/utils/determineRootSize.dart';
 
-class CardMobile extends StatelessWidget {
+class Testimonial extends StatelessWidget {
   final bool addSVG;
   final String personName;
   final String personImg;
@@ -14,7 +15,7 @@ class CardMobile extends StatelessWidget {
   final HSLColor backgroundColor;
   final HSLColor textColor;
 
-  const CardMobile(
+  const Testimonial(
       {Key? key,
       required this.personName,
       required this.personImg,
@@ -29,6 +30,7 @@ class CardMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double rootSize = Provider.of<RootSizeProvider>(context).rootSize;
+    final double deviceWidth = MediaQuery.of(context).size.width;
     return Container(
       decoration: BoxDecoration(
         color: backgroundColor.toColor(),
@@ -46,17 +48,18 @@ class CardMobile extends StatelessWidget {
         children: [
           if (addSVG)
             Positioned(
-              right: rootSize * 2,
+              right: deviceWidth < deviceWidths['md']!
+                  ? rootSize * 2
+                  : rootSize * 6,
               child: SvgPicture.asset(
                 "assets/images/bg-pattern-quotation.svg",
                 semanticsLabel: "Quotation marks",
+                height: 97,
               ),
             ),
           Padding(
             padding: EdgeInsets.symmetric(
                 horizontal: rootSize * 2, vertical: rootSize * 2.3),
-            // padding: EdgeInsets.symmetric(
-            //     horizontal: rootSize * 2.5, vertical: rootSize * 3),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

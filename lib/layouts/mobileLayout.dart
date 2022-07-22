@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:testimonials_grid_section/components/cardMobile.dart';
+import 'package:testimonials_grid_section/components/testimonial.dart';
 import 'package:testimonials_grid_section/utils/addSpacing.dart';
 import 'package:provider/provider.dart';
 import 'package:testimonials_grid_section/providers/rootSizeProvider.dart';
@@ -19,7 +19,7 @@ class MobileLayout extends StatelessWidget {
       ),
       child: Column(
         children: [
-          CardMobile(
+          Testimonial(
             personName: "Daniel Clifford",
             personImg: "image-daniel.jpg",
             personDescription: "Verified Graduate",
@@ -31,7 +31,7 @@ class MobileLayout extends StatelessWidget {
             textColor: COLOR_WHITE,
           ),
           addVerticalSpacing(rootSize * 2),
-          CardMobile(
+          Testimonial(
             personName: "Jonathan Walters",
             personImg: "image-jonathan.jpg",
             personDescription: "Verified Graduate",
@@ -42,7 +42,7 @@ class MobileLayout extends StatelessWidget {
             textColor: COLOR_WHITE,
           ),
           addVerticalSpacing(rootSize * 2),
-          CardMobile(
+          Testimonial(
             personName: "Jeanette Harmon",
             personImg: "image-jeanette.jpg",
             personDescription: "Verified Graduate",
@@ -53,7 +53,7 @@ class MobileLayout extends StatelessWidget {
             textColor: COLOR_BLACK_BLUE_DARK,
           ),
           addVerticalSpacing(rootSize * 2),
-          CardMobile(
+          Testimonial(
             personName: "Patrick Abrams",
             personImg: "image-patrick.jpg",
             personDescription: "Verified Graduate",
@@ -65,7 +65,7 @@ class MobileLayout extends StatelessWidget {
             textColor: COLOR_WHITE,
           ),
           addVerticalSpacing(rootSize * 2),
-          CardMobile(
+          Testimonial(
             personName: "Kira Whittle",
             personImg: "image-kira.jpg",
             personDescription: "Verified Graduate",

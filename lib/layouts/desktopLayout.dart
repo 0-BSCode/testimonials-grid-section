@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:testimonials_grid_section/components/cardMobile.dart';
+import 'package:testimonials_grid_section/components/testimonial.dart';
 import 'package:testimonials_grid_section/providers/rootSizeProvider.dart';
 import 'package:testimonials_grid_section/styling.dart';
 import 'package:testimonials_grid_section/utils/addSpacing.dart';
@@ -31,7 +31,7 @@ class DesktopLayout extends StatelessWidget {
                         children: [
                           Expanded(
                             flex: 2,
-                            child: CardMobile(
+                            child: Testimonial(
                               personName: "Daniel Clifford",
                               personImg: "image-daniel.jpg",
                               personDescription: "Verified Graduate",
@@ -41,12 +41,13 @@ class DesktopLayout extends StatelessWidget {
                                   "I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a transition and have heard some people who had an amazing experience here. I signed up for the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the best - and most grueling - time of my life. Since completing the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup.",
                               backgroundColor: COLOR_VIOLET,
                               textColor: COLOR_WHITE,
+                              addSVG: true,
                             ),
                           ),
                           addHorizontalSpacing(rootSize * 2),
                           Expanded(
                             flex: 1,
-                            child: CardMobile(
+                            child: Testimonial(
                               personName: "Jonathan Walters",
                               personImg: "image-jonathan.jpg",
                               personDescription: "Verified Graduate",
@@ -66,7 +67,7 @@ class DesktopLayout extends StatelessWidget {
                         children: [
                           Expanded(
                             flex: 1,
-                            child: CardMobile(
+                            child: Testimonial(
                               personName: "Jeanette Harmon",
                               personImg: "image-jeanette.jpg",
                               personDescription: "Verified Graduate",
@@ -81,7 +82,7 @@ class DesktopLayout extends StatelessWidget {
                           addHorizontalSpacing(rootSize * 2),
                           Expanded(
                             flex: 2,
-                            child: CardMobile(
+                            child: Testimonial(
                               personName: "Patrick Abrams",
                               personImg: "image-patrick.jpg",
                               personDescription: "Verified Graduate",
@@ -100,7 +101,7 @@ class DesktopLayout extends StatelessWidget {
                 ),
                 addHorizontalSpacing(rootSize * 2),
                 Expanded(
-                  child: CardMobile(
+                  child: Testimonial(
                     personName: "Kira Whittle",
                     personImg: "image-kira.jpg",
                     personDescription: "Verified Graduate",
