@@ -17,7 +17,6 @@ class DesktopLayout extends StatelessWidget {
         builder: (context, constraints) {
           return Container(
             width: constraints.maxWidth,
-            // color: COLOR_BLACK_BLUE_DARK.toColor(),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
